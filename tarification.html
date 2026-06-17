@@ -22,6 +22,7 @@
       <a href="index.html">Notre approche</a>
       <a href="differences.html">Nos différences</a>
       <a href="tarification.html" class="active">Tarification</a>
+      <a href="engagements.html">Nos engagements</a>
       <a href="equipe.html">Qui sommes-nous?</a>
       <a class="btn btn-accent" href="equipe.html#contact" style="padding:10px 22px">Parlons-en</a>
     </nav>
@@ -35,6 +36,38 @@
     <span class="eyebrow-lg" style="color:var(--mint)">Notre tarification</span>
     <div class="price-hero" style="margin:18px 0"><span style="font-size:.32em;color:#fff;font-weight:600"><span class="uline white">Licence</span> à</span>&nbsp;0 € <span style="font-size:.32em;color:#fff;font-weight:600">/ an </span></div>
     <p style="font-family:var(--display);font-weight:500;font-size:clamp(1.6rem,4vw,2.6rem);color:#fff">Oui, vous avez bien lu.</p>
+  </div>
+</section>
+
+<!-- ===== Bloc 3.2 — Simulateur ===== -->
+<section class="bg-mint pad skew-top" style="margin-top:-4vw">
+  <div class="container">
+    <div class="sec-head center" style="margin-bottom:44px">
+      <span class="eyebrow-lg">Le simulateur</span>
+      <h2 class="h2" style="margin-top:16px;color:var(--teal-900)">Simulez vos économies</h2>
+      <p class="lead" style="color:var(--teal-900)">Combien gardez-vous dans votre poche en passant par Les Moulins d'Odooce&nbsp;?</p>
+    </div>
+
+    <div class="calc">
+      <div class="row">
+        <div style="text-align:center">
+          <label for="users">Nombre d'utilisateurs Odoo</label>
+          <input type="number" id="users" min="1" max="200" value="10">
+        </div>
+        <div class="slider">
+          <label for="usersR">Faites glisser</label>
+          <input type="range" id="usersR" min="1" max="100" value="10">
+        </div>
+      </div>
+
+      <div class="result">
+        <div class="res-box"><div class="n" id="rLicence">5 400 €</div><span>de licence économisée par an</span></div>
+        <div class="res-box"><div class="n" id="rHeberg">1 020 €</div><span>d'hébergement économisé par an</span></div>
+        <div class="res-box big"><div class="n" id="rAnnuel" style="font-size:clamp(2.6rem,6vw,4rem)">6 420 €</div><span style="font-size:1.05rem">votre économie estimée <strong>par an</strong></span></div>
+      </div>
+      <p class="disclaimer">Estimation indicative. Hypothèses&nbsp;: licence Enterprise ≈ 45 €/utilisateur/mois (540 €/an) économisée grâce à l'édition Community, hébergement ≈ 85 €/mois (1 020 €/an). Chiffres à affiner selon votre projet.</p>
+      <div class="center" style="margin-top:18px"><a class="btn btn-accent" href="equipe.html#contact">Obtenir un chiffrage précis</a></div>
+    </div>
   </div>
 </section>
 
@@ -59,38 +92,6 @@
   </div>
 </section>
 
-<!-- ===== Bloc 3.2 — Simulateur ===== -->
-<section class="bg-mint pad skew-top">
-  <div class="container">
-    <div class="sec-head center" style="margin-bottom:44px">
-      <span class="eyebrow-lg">Le simulateur</span>
-      <h2 class="h2" style="margin-top:16px;color:var(--teal-900)">Simulez vos économies</h2>
-      <p class="lead" style="color:var(--teal-900)">Combien gardez-vous dans votre poche en passant par Les Moulins d'Odooce&nbsp;?</p>
-    </div>
-
-    <div class="calc">
-      <div class="row">
-        <div style="text-align:center">
-          <label for="users">Nombre d'utilisateurs Odoo</label>
-          <input type="number" id="users" min="1" max="200" value="10">
-        </div>
-        <div class="slider">
-          <label for="usersR">Faites glisser</label>
-          <input type="range" id="usersR" min="1" max="100" value="10">
-        </div>
-      </div>
-
-      <div class="result">
-        <div class="res-box"><div class="n" id="rLicence">3 600 €</div><span>de licence économisée par an</span></div>
-        <div class="res-box"><div class="n" id="rMission">5 000 €</div><span>économisés sur la mission d'intégration</span></div>
-        <div class="res-box big"><div class="n" id="r3ans" style="font-size:clamp(2.6rem,6vw,4rem)">15 800 €</div><span style="font-size:1.05rem">votre économie estimée sur <strong>3 ans</strong></span></div>
-      </div>
-      <p class="disclaimer">Estimation indicative. Hypothèses&nbsp;: licence Enterprise ≈ 30 €/utilisateur/mois économisée (édition Community), mission concurrente ≈ 10 k€ contre ≈ 5 k€ chez nous. Chiffres à affiner selon votre projet.</p>
-      <div class="center" style="margin-top:18px"><a class="btn btn-accent" href="equipe.html#contact">Obtenir un chiffrage précis</a></div>
-    </div>
-  </div>
-</section>
-
 <footer class="footer">
   <div class="container">
     <div class="fgrid">
@@ -109,15 +110,15 @@
 
 <script>
 (function(){
-  var LIC_PER_USER_YEAR = 30*12, MISSION_SAVING = 5000;
+  var LIC_PER_USER_YEAR = 45*12, HOSTING_YEAR = 85*12;
   var num=document.getElementById('users'), rng=document.getElementById('usersR');
   var fmt=function(n){return Math.round(n).toLocaleString('fr-FR')+' €';};
   function update(n){
     n=Math.max(1,Math.min(200,n||1));
     var lic=LIC_PER_USER_YEAR*n;
     document.getElementById('rLicence').textContent=fmt(lic);
-    document.getElementById('rMission').textContent=fmt(MISSION_SAVING);
-    document.getElementById('r3ans').textContent=fmt(lic*3+MISSION_SAVING);
+    document.getElementById('rHeberg').textContent=fmt(HOSTING_YEAR);
+    document.getElementById('rAnnuel').textContent=fmt(lic+HOSTING_YEAR);
   }
   num.addEventListener('input',function(){if(this.value<=100)rng.value=this.value;update(+this.value);});
   rng.addEventListener('input',function(){num.value=this.value;update(+this.value);});
