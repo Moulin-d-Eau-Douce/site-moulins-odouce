@@ -109,8 +109,23 @@ h1,h2,h3,h4{font-family:var(--display);font-weight:700;line-height:1.0;letter-sp
 .nav{display:flex;gap:16px;align-items:center}
 .nav a{font-family:var(--display);font-weight:500;font-size:.90rem;color:var(--ink)}
 .nav a:hover{color:var(--teal-600)}
-.nav a.active{color:var(--teal-800);position:relative}
-.nav a.active::after{content:"";position:absolute;left:0;right:0;bottom:-6px;height:3px;border-radius:3px;background:var(--orange)}
+.nav a.active{color:var(--teal-800)}
+
+.nav>a:not(.btn),.nav-drop>a{position:relative}
+.nav>a:not(.btn)::before,.nav-drop>a::before{content:"";position:absolute;left:0;right:0;bottom:-6px;height:3px;
+  border-radius:3px;background:var(--orange);opacity:0;transition:opacity .15s ease}
+.nav>a:not(.btn):hover::before,.nav>a:not(.btn).active::before,
+.nav-drop>a:hover::before,.nav-drop>a.active::before{opacity:1}
+
+.nav-drop{position:relative}
+.nav-drop>a{display:flex;align-items:center;gap:5px}
+.nav-drop>a::after{content:"";width:6px;height:6px;border-right:1.6px solid currentColor;border-bottom:1.6px solid currentColor;transform:rotate(45deg) translateY(-2px);transition:transform .2s ease}
+.nav-drop:hover>a::after,.nav-drop:focus-within>a::after{transform:rotate(225deg) translateY(1px)}
+.nav-drop-menu{display:none;position:absolute;top:100%;left:0;padding-top:14px;min-width:240px;z-index:5}
+.nav-drop:hover .nav-drop-menu,.nav-drop:focus-within .nav-drop-menu{display:block}
+.nav-drop-menu-inner{background:#fff;border-radius:14px;box-shadow:0 20px 40px -20px rgba(12,63,67,.5);border:1px solid rgba(0,0,0,.06);padding:10px;display:flex;flex-direction:column;gap:2px}
+.nav-drop-menu a{padding:10px 14px;border-radius:9px;font-size:.88rem;position:relative}
+.nav-drop-menu a:hover{background:var(--ice);color:var(--orange)}
 .burger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:6px}
 .burger span{width:24px;height:2px;background:var(--ink);display:block;border-radius:2px}
 
@@ -374,6 +389,9 @@ section{position:relative}
   .nav{display:none}
   .nav.open{display:flex;position:absolute;top:100%;left:0;right:0;flex-direction:column;background:var(--cream);
     padding:18px 24px;gap:16px;border-bottom:1px solid rgba(0,0,0,.08);box-shadow:0 20px 30px -20px rgba(0,0,0,.4)}
+  .nav-drop-menu{display:flex !important;position:static;padding-top:8px;min-width:0}
+  .nav-drop-menu-inner{background:transparent;box-shadow:none;border:none;padding:4px 0 0 10px;border-left:2px solid rgba(0,0,0,.08)}
+  .nav-drop>a::after{display:none}
   .burger{display:flex}
   .cols3,.apps,.enjeux,.reasons,.team,.calc .result{grid-template-columns:1fr;gap:26px}
   .feature{grid-template-columns:1fr;gap:30px}
@@ -441,6 +459,78 @@ section{position:relative}
 
 /* simulateur : libellés plus gros */
 .calc label{font-size:1.14rem}
+
+/* ---------- MILLØ : schéma des flux (cartes cliquables) ---------- */
+.millo-visual{background:var(--ice);
+  border-radius:63% 37% 54% 46% / 46% 55% 45% 54%;
+  display:flex;align-items:center;justify-content:center;padding:26px;
+  width:min(100%,190px);aspect-ratio:1/1;margin:0 auto;overflow:hidden;
+  -webkit-mask-image:radial-gradient(circle, #000 55%, transparent 88%);
+  mask-image:radial-gradient(circle, #000 55%, transparent 88%)}
+
+.flow-row{display:flex;align-items:flex-start;gap:0;margin-top:40px}
+.flow-card{flex:1;background:#fff;border-radius:var(--radius-lg);border:1px solid rgba(0,0,0,.06);
+  padding:28px;cursor:pointer;transition:transform .25s ease,box-shadow .25s ease,background .25s ease;
+  box-shadow:0 14px 30px -22px rgba(12,63,67,.35)}
+.flow-card:hover{transform:translateY(-4px);box-shadow:0 22px 40px -20px rgba(12,63,67,.5)}
+.flow-card.open{background:var(--teal-900);box-shadow:0 30px 60px -25px rgba(12,63,67,.7)}
+.flow-card.open .flow-title{color:#fff}
+.flow-card .flow-icon{width:56px;height:56px;border-radius:14px;background:var(--ice);display:grid;place-items:center;margin-bottom:16px}
+.flow-card.open .flow-icon{background:rgba(255,255,255,.12)}
+.flow-title{font-family:var(--display);font-weight:700;font-size:1.15rem;color:var(--teal-900);display:flex;align-items:center;justify-content:space-between;gap:10px}
+.flow-title::after{content:"+";font-size:1.3rem;line-height:1;color:var(--teal-600);transition:transform .2s ease;flex:0 0 auto}
+.flow-card.open .flow-title::after{transform:rotate(45deg);color:var(--mint)}
+.flow-detail{max-height:0;overflow:hidden;opacity:0;transition:max-height .4s ease,opacity .3s ease,margin-top .3s ease}
+.flow-card.open .flow-detail{max-height:1200px;opacity:1;margin-top:20px}
+.flow-detail>p{color:rgba(255,255,255,.85);font-size:.95rem;line-height:1.5}
+.flow-lead{color:rgba(255,255,255,.85);font-size:.93rem;margin-bottom:14px}
+.flow-note{list-style:disc;padding-left:20px;display:flex;flex-direction:column;gap:6px;color:rgba(255,255,255,.85);font-size:.93rem;margin-bottom:14px}
+.flow-note:last-child{margin-bottom:0}
+.flow-note li::marker{color:var(--mint)}
+
+.flow-arrow-h{flex:0 0 44px;display:flex;align-items:center;justify-content:center;color:var(--teal-600);padding-top:44px}
+@media(max-width:900px){
+  .flow-row{flex-direction:column;gap:16px}
+  .flow-arrow-h{width:100%;height:30px;padding-top:0;transform:rotate(90deg)}
+}
+
+.sub-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:12px;padding:14px 16px;cursor:pointer;transition:background .2s ease;margin-top:10px}
+.sub-card:first-child{margin-top:0}
+.sub-card:hover{background:rgba(255,255,255,.1)}
+.sub-card-head{display:flex;align-items:center;justify-content:space-between;font-family:var(--display);font-weight:700;color:#fff;font-size:.92rem}
+.sub-card-head::after{content:"+";font-size:1.15rem;line-height:1;color:var(--mint);transition:transform .2s ease}
+.sub-card.open .sub-card-head::after{transform:rotate(45deg)}
+.sub-card-body{max-height:0;overflow:hidden;opacity:0;transition:max-height .35s ease,opacity .25s ease,margin-top .35s ease}
+.sub-card.open .sub-card-body{max-height:560px;opacity:1;margin-top:10px}
+
+.shot-thumb{margin-top:14px;cursor:zoom-in;border-radius:10px;overflow:hidden;border:1px solid rgba(255,255,255,.2);position:relative;max-width:240px}
+.shot-thumb img{width:100%;display:block}
+.shot-thumb .shot-tag{position:absolute;bottom:6px;right:8px;background:rgba(12,63,67,.75);color:#fff;font-size:.68rem;
+  font-family:var(--display);padding:3px 8px;border-radius:6px}
+.shot-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+.shot-row .shot-thumb{margin-top:0;max-width:150px}
+.lightbox{display:none;position:fixed;inset:0;background:rgba(12,63,67,.92);z-index:200;align-items:center;justify-content:center;padding:40px;cursor:zoom-out}
+.lightbox.open{display:flex}
+.lightbox img{max-width:100%;max-height:100%;border-radius:12px;box-shadow:0 30px 80px -20px rgba(0,0,0,.6)}
+
+.module-autres{background:rgba(167,205,238,.26)}
+
+/* ---------- Logo MILLØ (wordmark + Ø stylisé, roue du moulin) ---------- */
+.millo-logo{display:flex;align-items:center;gap:.08em;color:var(--teal-900);font-family:var(--display);font-weight:800;
+  font-size:clamp(1.3rem,3vw,1.7rem);letter-spacing:-.01em;line-height:1}
+.millo-o{width:.86em;height:.86em;display:inline-flex;flex:0 0 auto}
+.millo-o svg{width:100%;height:100%}
+
+/* ---------- MILLØ : modules du schéma (couleur distincte par module) ---------- */
+.module-block{border-radius:var(--radius-lg);padding:32px;margin-top:32px}
+.module-block:first-child{margin-top:44px}
+.module-head{display:flex;align-items:center;gap:14px;margin-bottom:22px}
+.module-head .module-icon{width:52px;height:52px;border-radius:14px;background:#fff;display:grid;place-items:center;flex:0 0 auto;box-shadow:0 10px 20px -12px rgba(12,63,67,.35)}
+.module-head .module-icon img{width:28px;height:26px;object-fit:contain}
+.module-head h3{font-family:var(--display);font-weight:800;font-size:1.35rem;color:var(--teal-900)}
+.module-achat{background:var(--ice)}
+.module-vente{background:rgba(168,227,209,.28)}
+.module-declaration{background:rgba(240,103,31,.08)}
 
 /* re-collapse mobile (doit passer APRÈS les overrides ci-dessus) */
 @media(max-width:980px){

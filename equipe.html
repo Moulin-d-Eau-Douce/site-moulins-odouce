@@ -19,11 +19,26 @@
       Les Moulins d'eau douce
     </a>
     <nav class="nav" id="nav">
-      <a href="index.html">Notre approche</a>
+      <div class="nav-drop">
+        <a href="solutions.html">Nos solutions</a>
+        <div class="nav-drop-menu">
+          <div class="nav-drop-menu-inner">
+            <a href="solutions.html#millo">MILLØ - tri de grains</a>
+            <a href="solutions.html#integration">L'intégration Odoo</a>
+            <a href="solutions.html#references">Ils nous ont fait confiance</a>
+          </div>
+        </div>
+      </div>
       <a href="differences.html">Nos différences</a>
-      <a href="tarification.html">Tarification</a>
-      <a href="engagements.html">Nos engagements</a>
-      <a href="equipe.html" class="active">Qui sommes-nous?</a>
+      <div class="nav-drop">
+        <a href="engagements.html" class="active">Nos engagements</a>
+        <div class="nav-drop-menu">
+          <div class="nav-drop-menu-inner">
+            <a href="engagements.html">Notre démarche</a>
+            <a href="equipe.html" class="active">Qui sommes-nous&nbsp;?</a>
+          </div>
+        </div>
+      </div>
       <a class="btn btn-accent" href="#contact" style="padding:10px 22px">Parlons-en</a>
     </nav>
     <button class="burger" aria-label="Menu" onclick="document.getElementById('nav').classList.toggle('open')"><span></span><span></span><span></span></button>
@@ -49,9 +64,7 @@
   <div class="container narrow">
     <span class="eyebrow-lg" style="color:var(--mint)">Qui sommes-nous?</span>
     <h1 class="h2" style="color:#fff;margin:16px 0 22px">Un moulin, deux meuniers, <br><span style="color:var(--mint)">une conviction</span></h1>
-    <p class="lead" style="opacity:.92;max-width:58ch">Les Moulins d'eau douce est un <strong>intégrateur Odoo expert</strong>, 
-      spécialisé dans l'agro-alimentaire. Une jeune équipe dynamique, centrée sur l'<span class="mk-mint" style="color:#0c3f43">éthique</span>,
-       l'efficacité et la personnalisation forte. On met l'outil au service du métier — de façon terre à terre.</p>
+    <p class="lead" style="opacity:.92;max-width:58ch">Passionnés par l'agriculture et animés par la volonté de faire tourner le monde dans le <span class="mk-mint" style="color:#0c3f43">bon sens</span>, nous avons bâti Les Moulins d'eau douce.</p>
   </div>
 </section>
 
@@ -65,27 +78,29 @@
     <div class="team">
       <div class="member">
         <span class="quot">“</span>
-        <blockquote>Ingénieur-commercial à l'écoute, je vous aide à explorer et maîtriser vos enjeux métiers. En toute sérénité.</blockquote>
+        <blockquote>Cadrer juste, livrer sans accroc.</blockquote>
         <div class="who">
-          <div class="circle-photo"><img class="ph-svg" src="images/mathis_pro.jpeg" alt="mathis_pro"></div>
+          <div class="circle-photo"><img class="ph-svg" src="images/pdp_linkedin.JPG" alt="Mathis" style="object-position:center 75%"></div>
           <div>
             <h4 style="font-size:1.3rem">Mathis</h4>
-            <div class="role" style="font-size:1rem">Responsable de la relation client</div>
-            <div class="edu" style="font-size:.95rem">Ingénieur INSA · Sciences Po Rennes</div>
+            <div class="role" style="font-size:1rem">Concepteur</div>
+            <div class="edu" style="font-size:.95rem">Ingénieur INSA</div>
           </div>
         </div>
+        <p style="margin-top:18px;color:#3a4d4c;font-size:.96rem;line-height:1.55">Ingénieur INSA, Mathis conçoit vos solutions Odoo de A à Z&nbsp;: cadrage précis, spécifications claires, mise en œuvre sans mauvaise surprise. Il pilote chaque projet avec la rigueur d'un ingénieur qui connaît son métier.</p>
       </div>
       <div class="member">
         <span class="quot">“</span>
-        <blockquote>Passionné d'agriculture et développeur expérimenté, je traduis tous vos besoins en fonctionnalités Odoo précises.</blockquote>
+        <blockquote>Du besoin métier au code qui tourne.</blockquote>
         <div class="who">
-          <div class="circle-photo" style="background:linear-gradient(135deg,var(--sky),var(--teal-800))"><img class="ph-svg" src="images/andres_pro.jpg" alt="andres_pro"></div>
+          <div class="circle-photo" style="background:linear-gradient(135deg,var(--sky),var(--teal-800))"><img class="ph-svg" src="images/photo_andres.jpeg" alt="Andres"></div>
           <div>
             <h4 style="font-size:1.3rem">Andres</h4>
-            <div class="role" style="font-size:1rem">Responsable du développement informatique</div>
+            <div class="role" style="font-size:1rem">Développeur</div>
             <div class="edu" style="font-size:.95rem">Ingénieur AgroParisTech</div>
           </div>
         </div>
+        <p style="margin-top:18px;color:#3a4d4c;font-size:.96rem;line-height:1.55">Ingénieur AgroParisTech et développeur, Andres transforme vos besoins métiers en fonctionnalités Odoo robustes, documentées et durables. Du code propre, testé, pensé pour tenir dans le temps.</p>
       </div>
     </div>
   </div>
@@ -161,15 +176,16 @@
         </div>
         <div class="field"><label for="message">Votre projet en quelques mots <span class="req">*</span></label><textarea id="message" name="message" placeholder="Vos processus actuels, ce qui vous freine, vos objectifs…" required></textarea></div>
         <button type="submit" class="btn btn-accent">Lancer mon diagnostic</button>
-        <div id="formOk" style="display:none;margin-top:18px;padding:16px 18px;background:var(--teal-800);color:#fff;border-radius:10px;font-family:var(--display);font-weight:600">Merci&nbsp;! Votre demande est partie. On revient vers vous très vite.</div>
+        <div id="formOk" style="display:none;margin-top:18px;padding:16px 18px;background:var(--teal-800);color:#fff;border-radius:10px;font-family:var(--display);font-weight:600">Votre messagerie s'est ouverte avec votre demande pré-remplie&nbsp;: il ne vous reste plus qu'à l'envoyer&nbsp;!</div>
       </form>
 
       <aside class="coords">
         <h3>Nos coordonnées</h3>
-        <div class="line"><svg viewBox="0 0 24 24" fill="none" stroke="#a8e3d1" stroke-width="2"><path d="M4 4h4l2 5-3 2a14 14 0 0 0 6 6l2-3 5 2v4a2 2 0 0 1-2 2A18 18 0 0 1 2 6a2 2 0 0 1 2-2z"/></svg><a href="tel:+33000000000">01 23 45 67 89</a></div>
-        <div class="line"><svg viewBox="0 0 24 24" fill="none" stroke="#a8e3d1" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg><a href="mailto:pro.mathisgaspar@gmail.com">pro.mathisgaspar@gmail.com</a></div>
-        <div class="line"><svg viewBox="0 0 24 24" fill="none" stroke="#a8e3d1" stroke-width="2"><path d="M12 21s-7-6-7-11a7 7 0 0 1 14 0c0 5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg><span>12 rue des Meuniers, 75000 Paris <em style="opacity:.6">(à compléter)</em></span></div>
-        <p style="margin-top:18px;opacity:.85;font-size:.95rem">Plutôt réseaux&nbsp;? Retrouvez-nous sur <a href="#">LinkedIn</a> et <a href="#">GitHub</a>.</p>
+        <div class="line"><svg viewBox="0 0 24 24" fill="none" stroke="#a8e3d1" stroke-width="2"><path d="M4 4h4l2 5-3 2a14 14 0 0 0 6 6l2-3 5 2v4a2 2 0 0 1-2 2A18 18 0 0 1 2 6a2 2 0 0 1 2-2z"/></svg><a href="tel:+33780048603">+33 7 80 04 86 03</a></div>
+        <div class="line"><svg viewBox="0 0 24 24" fill="none" stroke="#a8e3d1" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg><a href="mailto:contact@lesmoulinsdeaudouce.fr">contact@lesmoulinsdeaudouce.fr</a></div>
+        <div class="line"><svg viewBox="0 0 24 24" fill="none" stroke="#a8e3d1" stroke-width="2"><path d="M12 21s-7-6-7-11a7 7 0 0 1 14 0c0 5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg><span>France, Belgique, Suisse, Espagne</span></div>
+        <p style="margin-top:18px;opacity:.85;font-size:.95rem">Plutôt réseaux&nbsp;? Retrouvez-nous sur <a href="https://www.linkedin.com/in/mathis-gaspar-b0950a224" target="_blank" rel="noopener noreferrer">LinkedIn</a>.</p>
+        <p style="margin-top:8px;opacity:.85;font-size:.95rem">Retrouvez notre code open source sur <a href="https://github.com/Moulin-d-Eau-Douce/site-moulins-odouce" target="_blank" rel="noopener noreferrer">GitHub</a>.</p>
       </aside>
     </div>
   </div>
@@ -180,11 +196,10 @@
     <div class="fgrid">
       <div class="fcol">
         <a class="brand" href="index.html" style="color:#fff"><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="22" fill="none" stroke="currentColor" stroke-width="2.4"/><g class="logo-wheel"><path d="M24 24 L24 6 L39 14 Z" fill="#5cb8b2"/><path d="M24 24 L42 24 L34 39 Z" fill="#a8e3d1"/><path d="M24 24 L24 42 L9 34 Z" fill="#5cb8b2"/><path d="M24 24 L6 24 L14 9 Z" fill="#a8e3d1"/></g><circle cx="24" cy="24" r="7" fill="#0c3f43"/><circle cx="24" cy="24" r="3.4" fill="#a8e3d1"/></svg>Les Moulins d'eau douce</a>
-        <p class="tagline">Simple, efficace, abordable. L'intégration Odoo terre à terre, au service de l'agro-alimentaire.</p>
       </div>
-      <div class="fcol"><span class="title">Le site</span><a href="index.html">Notre approche</a><a href="differences.html">Nos différences</a><a href="tarification.html">Tarification</a><a href="equipe.html">Qui sommes-nous</a></div>
-      <div class="fcol"><span class="title">Odoo &amp; agro</span><a href="index.html#methodologie">Notre méthodologie</a><a href="differences.html">Spécialisation agro</a><a href="differences.html">Sécurité</a></div>
-      <div class="fcol"><span class="title">Contact</span><a href="#contact">Diagnostic gratuit</a><a href="mailto:pro.mathisgaspar@gmail.com">pro.mathisgaspar@gmail.com</a><a href="tel:+33000000000">01 23 45 67 89</a></div>
+      <div class="fcol"><span class="title">Le site</span><a href="solutions.html">Nos solutions</a><a href="differences.html">Nos différences</a><a href="engagements.html">Nos engagements</a><a href="equipe.html">Qui sommes-nous</a></div>
+      <div class="fcol"><span class="title">Odoo &amp; agro</span><a href="solutions.html#methodologie">Notre méthodologie</a><a href="differences.html">Spécialisation agro</a><a href="differences.html">Sécurité</a></div>
+      <div class="fcol"><span class="title">Contact</span><a href="#contact">Diagnostic gratuit</a><a href="mailto:contact@lesmoulinsdeaudouce.fr">contact@lesmoulinsdeaudouce.fr</a><a href="tel:+33780048603">+33 7 80 04 86 03</a></div>
       <div class="fcol"><span class="title">Nous suivre</span><div class="socials"><a href="#">in</a><a href="#">gh</a></div></div>
     </div>
     <div class="legal">© 2026 Les Moulins d'eau douce — Mentions légales · Confidentialité · Hébergement sécurisé</div>
@@ -202,6 +217,20 @@ document.querySelectorAll('.acc-q').forEach(function(q){
 document.getElementById('contactForm').addEventListener('submit',function(e){
   e.preventDefault();
   if(!this.checkValidity()){this.reportValidity();return;}
+
+  var f = this;
+  var subject = 'Diagnostic Odoo — ' + f.entreprise.value;
+  var body = [
+    'Prénom : ' + f.prenom.value,
+    'Nom : ' + f.nom.value,
+    'Entreprise : ' + f.entreprise.value,
+    'Téléphone : ' + (f.tel.value || '—'),
+    'Type de demande : ' + (f.type.value || '—'),
+    '',
+    f.message.value
+  ].join('\n');
+  window.location.href = 'mailto:contact@lesmoulinsdeaudouce.fr?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+
   this.querySelector('button[type=submit]').style.display='none';
   document.getElementById('formOk').style.display='block';
   document.getElementById('formOk').scrollIntoView({behavior:'smooth',block:'center'});
