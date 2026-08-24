@@ -462,31 +462,22 @@ section{position:relative}
 
 /* ---------- MILLØ : schéma des flux (cartes cliquables) ---------- */
 .millo-visual{background:var(--ice);
-  border-radius:63% 37% 54% 46% / 46% 55% 45% 54%;
-  display:flex;align-items:center;justify-content:center;padding:26px;
-  width:min(100%,190px);aspect-ratio:1/1;margin:0 auto;overflow:hidden;
-  -webkit-mask-image:radial-gradient(circle, #000 55%, transparent 88%);
-  mask-image:radial-gradient(circle, #000 55%, transparent 88%)}
+  border-radius:50%;
+  display:flex;align-items:center;justify-content:center;padding:14px;
+  width:min(100%,150px);aspect-ratio:2.3/1;margin:0 auto;overflow:hidden;
+  -webkit-mask-image:radial-gradient(ellipse, #000 55%, transparent 90%);
+  mask-image:radial-gradient(ellipse, #000 55%, transparent 90%)}
 
-.flow-row{display:flex;align-items:flex-start;gap:0;margin-top:40px}
+.flow-row{display:flex;align-items:stretch;gap:24px;margin-top:40px}
 .flow-card{flex:1;background:#fff;border-radius:var(--radius-lg);border:1px solid rgba(0,0,0,.06);
-  padding:28px;cursor:pointer;transition:transform .25s ease,box-shadow .25s ease,background .25s ease;
-  box-shadow:0 14px 30px -22px rgba(12,63,67,.35)}
-.flow-card:hover{transform:translateY(-4px);box-shadow:0 22px 40px -20px rgba(12,63,67,.5)}
-.flow-card.open{background:var(--teal-900);box-shadow:0 30px 60px -25px rgba(12,63,67,.7)}
-.flow-card.open .flow-title{color:#fff}
+  padding:28px;box-shadow:0 14px 30px -22px rgba(12,63,67,.35)}
 .flow-card .flow-icon{width:56px;height:56px;border-radius:14px;background:var(--ice);display:grid;place-items:center;margin-bottom:16px}
-.flow-card.open .flow-icon{background:rgba(255,255,255,.12)}
-.flow-title{font-family:var(--display);font-weight:700;font-size:1.15rem;color:var(--teal-900);display:flex;align-items:center;justify-content:space-between;gap:10px}
-.flow-title::after{content:"+";font-size:1.3rem;line-height:1;color:var(--teal-600);transition:transform .2s ease;flex:0 0 auto}
-.flow-card.open .flow-title::after{transform:rotate(45deg);color:var(--mint)}
-.flow-detail{max-height:0;overflow:hidden;opacity:0;transition:max-height .4s ease,opacity .3s ease,margin-top .3s ease}
-.flow-card.open .flow-detail{max-height:1200px;opacity:1;margin-top:20px}
-.flow-detail>p{color:rgba(255,255,255,.85);font-size:.95rem;line-height:1.5}
-.flow-lead{color:rgba(255,255,255,.85);font-size:.93rem;margin-bottom:14px}
-.flow-note{list-style:disc;padding-left:20px;display:flex;flex-direction:column;gap:6px;color:rgba(255,255,255,.85);font-size:.93rem;margin-bottom:14px}
+.flow-title{font-family:var(--display);font-weight:700;font-size:1.15rem;color:var(--teal-900);margin-bottom:18px}
+.flow-detail>p{color:#3a4d4c;font-size:.95rem;line-height:1.5}
+.flow-lead{color:#3a4d4c;font-size:.93rem;margin-bottom:14px}
+.flow-note{list-style:disc;padding-left:20px;display:flex;flex-direction:column;gap:6px;color:#3a4d4c;font-size:.93rem;margin-bottom:14px}
 .flow-note:last-child{margin-bottom:0}
-.flow-note li::marker{color:var(--mint)}
+.flow-note li::marker{color:var(--teal-600)}
 
 .flow-arrow-h{flex:0 0 44px;display:flex;align-items:center;justify-content:center;color:var(--teal-600);padding-top:44px}
 @media(max-width:900px){
@@ -494,16 +485,15 @@ section{position:relative}
   .flow-arrow-h{width:100%;height:30px;padding-top:0;transform:rotate(90deg)}
 }
 
-.sub-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:12px;padding:14px 16px;cursor:pointer;transition:background .2s ease;margin-top:10px}
-.sub-card:first-child{margin-top:0}
-.sub-card:hover{background:rgba(255,255,255,.1)}
-.sub-card-head{display:flex;align-items:center;justify-content:space-between;font-family:var(--display);font-weight:700;color:#fff;font-size:.92rem}
-.sub-card-head::after{content:"+";font-size:1.15rem;line-height:1;color:var(--mint);transition:transform .2s ease}
-.sub-card.open .sub-card-head::after{transform:rotate(45deg)}
-.sub-card-body{max-height:0;overflow:hidden;opacity:0;transition:max-height .35s ease,opacity .25s ease,margin-top .35s ease}
-.sub-card.open .sub-card-body{max-height:560px;opacity:1;margin-top:10px}
+.sub-block{margin-top:16px;padding-top:16px;border-top:1px solid rgba(12,63,67,.08)}
+.sub-block:first-child{margin-top:0;padding-top:0;border-top:none}
+.sub-block-head{font-family:var(--display);font-weight:700;color:var(--teal-900);font-size:.8rem;text-transform:uppercase;letter-spacing:.05em;margin-bottom:8px}
+.sub-block ul{list-style:none;display:flex;flex-direction:column;gap:6px}
+.sub-block li{color:#3a4d4c;font-size:.9rem;padding-left:14px;position:relative}
+.sub-block li::before{content:"";position:absolute;left:0;top:.6em;width:5px;height:5px;border-radius:50%;background:var(--teal-600)}
+.sub-block p{color:#3a4d4c;font-size:.9rem;margin:0}
 
-.shot-thumb{margin-top:14px;cursor:zoom-in;border-radius:10px;overflow:hidden;border:1px solid rgba(255,255,255,.2);position:relative;max-width:240px}
+.shot-thumb{margin-top:14px;cursor:zoom-in;border-radius:10px;overflow:hidden;border:1px solid rgba(0,0,0,.1);position:relative;max-width:240px}
 .shot-thumb img{width:100%;display:block}
 .shot-thumb .shot-tag{position:absolute;bottom:6px;right:8px;background:rgba(12,63,67,.75);color:#fff;font-size:.68rem;
   font-family:var(--display);padding:3px 8px;border-radius:6px}
@@ -517,7 +507,7 @@ section{position:relative}
 
 /* ---------- Logo MILLØ (wordmark + Ø stylisé, roue du moulin) ---------- */
 .millo-logo{display:flex;align-items:center;gap:.08em;color:var(--teal-900);font-family:var(--display);font-weight:800;
-  font-size:clamp(1.3rem,3vw,1.7rem);letter-spacing:-.01em;line-height:1}
+  font-size:clamp(.65rem,1.5vw,.85rem);letter-spacing:-.01em;line-height:1}
 .millo-o{width:.86em;height:.86em;display:inline-flex;flex:0 0 auto}
 .millo-o svg{width:100%;height:100%}
 

@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Intégration Odoo — Les Moulins d'eau douce | Intégrateur Odoo agro</title>
+<meta name="description" content="Notre intégration Odoo sur-mesure pour l'agro-alimentaire : ERP, méthodologie, et ce qui nous distingue d'une intégration standard.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Geist:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="container">
+    <a class="brand" href="index.html">
+      <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="22" fill="none" stroke="currentColor" stroke-width="2.4"/><g class="logo-wheel"><path d="M24 24 L24 6 L39 14 Z" fill="#178b88"/><path d="M24 24 L42 24 L34 39 Z" fill="#5cb8b2"/><path d="M24 24 L24 42 L9 34 Z" fill="#178b88"/><path d="M24 24 L6 24 L14 9 Z" fill="#5cb8b2"/></g><circle cx="24" cy="24" r="7" fill="#fff"/><circle cx="24" cy="24" r="3.4" fill="#0c3f43"/></svg>
+      Les Moulins d'eau douce
+    </a>
+    <nav class="nav" id="nav">
+      <a href="index.html">Millo ERP</a>
+      <a href="integration.html" class="active">Intégration Odoo</a>
+      <a href="differences.html">Nos différences</a>
+      <div class="nav-drop">
+        <a href="engagements.html">Nos engagements</a>
+        <div class="nav-drop-menu">
+          <div class="nav-drop-menu-inner">
+            <a href="engagements.html">Notre démarche</a>
+            <a href="equipe.html">Qui sommes-nous&nbsp;?</a>
+          </div>
+        </div>
+      </div>
+      <a class="btn btn-accent" href="equipe.html#contact" style="padding:10px 22px">Parlons-en</a>
+    </nav>
+    <button class="burger" aria-label="Menu" onclick="document.getElementById('nav').classList.toggle('open')"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<section id="integration" class="bg-beige pad">
+  <div class="container">
+    <div class="sec-head center" style="max-width:60ch">
+      <span class="eyebrow-lg">ERP, Odoo&nbsp;: c'est quoi&nbsp;?</span>
+      <p class="lead" style="margin-top:26px">Un <strong>ERP</strong> — <em>Enterprise Resource Planning</em> — est un logiciel qui permet de centraliser l'ensemble de vos <b>données</b> et de vos <b>processus métiers</b> dans un seul outil.</p>
+      <p class="lead" style="margin-top:14px">Odoo, c'est le meilleur ERP. C'est tout votre business <span class="mk-mint" style="color:#0c3f43">agro</span> sur une seule plateforme&nbsp;: <strong>simple</strong>, <strong>efficace</strong> et <strong>abordable</strong>.</p>
+    </div>
+
+    <p style="margin:46px 0 22px;font-family:var(--display);font-weight:400;font-size:1.35rem;color:var(--teal-900)">
+      Tous <b>vos besoins</b> sur une plateforme:
+    </p>
+    <div class="apps" style="grid-template-columns:repeat(4,1fr)">
+      <a href="https://www.odoo.com/fr_FR/app/purchase" class="app-link" target="_blank" rel="noopener noreferrer">
+        <div class="app">
+          <div class="ai">
+            <img src="images/achats.svg" alt="Achats" style="width:50px;height:40px;object-fit:contain">
+          </div>
+          <div>
+            <h4>Achats</h4>
+            <p>Gérez vos achats et fournisseurs</p>
+          </div>
+        </div>
+      </a>
+      <a href="https://www.odoo.com/fr_FR/app/sales" class="app-link" target="_blank" rel="noopener noreferrer">
+        <div class="app">
+          <div class="ai">
+            <img src="images/ventes.svg" alt="Ventes" style="width:50px;height:40px;object-fit:contain">
+          </div>
+          <div>
+            <h4>Ventes</h4>
+            <p>Devis, commandes, ventes</p>
+          </div>
+        </div>
+      </a>
+      <a href="https://www.odoo.com/fr_FR/app/inventory" class="app-link" target="_blank" rel="noopener noreferrer">
+        <div class="app">
+          <div class="ai">
+            <img src="images/inventaire_stock.svg" alt="Inventaire" style="width:50px;height:40px;object-fit:contain">
+          </div>
+          <div>
+            <h4>Inventaire</h4>
+            <p>Pilotez vos stocks et entrepôts</p>
+          </div>
+        </div>
+      </a>
+      <a href="https://www.odoo.com/fr_FR/app/accouting" class="app-link" target="_blank" rel="noopener noreferrer">
+        <div class="app">
+          <div class="ai">
+            <img src="images/compta.svg" alt="Comptabilité" style="width:50px;height:40px;object-fit:contain">
+          </div>
+          <div>
+            <h4>Comptabilité</h4>
+            <p>Gérez la comptabilité financière</p>
+          </div>
+        </div>
+      </a>
+      <a href="https://www.odoo.com/fr_FR/app/invoicing" class="app-link" target="_blank" rel="noopener noreferrer">
+        <div class="app">
+          <div class="ai">
+            <img src="images/factu.svg" alt="Facturation" style="width:50px;height:40px;object-fit:contain">
+          </div>
+          <div>
+            <h4>Facturation</h4>
+            <p>Facturez en un clic</p>
+          </div>
+        </div>
+      </a>
+      <a href="https://www.odoo.com/fr_FR/app/crm" class="app-link" target="_blank" rel="noopener noreferrer">
+        <div class="app">
+          <div class="ai">
+            <img src="images/crm.svg" alt="CRM" style="width:50px;height:50px;object-fit:contain">
+          </div>
+          <div>
+            <h4>CRM</h4>
+            <p>Suivez vos pistes commerciales</p>
+          </div>
+        </div>
+      </a>
+      <a href="https://www.odoo.com/fr_FR/app/ecommerce" class="app-link" target="_blank" rel="noopener noreferrer">
+        <div class="app">
+          <div class="ai">
+            <img src="images/e-commerce.svg" alt="e-Commerce" style="width:50px;height:40px;object-fit:contain">
+          </div>
+          <div>
+            <h4>e-Commerce</h4>
+            <p>Vendez vos produits en ligne</p>
+          </div>
+        </div>
+      </a>
+      <a href="https://www.odoo.com/fr_FR/app/employees" class="app-link" target="_blank" rel="noopener noreferrer">
+        <div class="app">
+          <div class="ai">
+            <img src="images/RH.svg" alt="RH" style="width:50px;height:40px;object-fit:contain">
+          </div>
+          <div>
+            <h4>RH</h4>
+            <p>Gérez vos employés</p>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="bg-mint pad skew-top">
+  <div class="container">
+    <div class="feature">
+      <div class="photo tall zoom" style="max-height:480px ; ">
+        <img class="ph-svg" src="images/ensemble2.jpeg" alt="intégrer avec nous">
+      </div>
+      <div class="copy">
+        <span class="eyebrow-lg">Pourquoi intégrer Odoo avec nous&nbsp;?</span>
+        <p class="lead" style="color:var(--teal-900);margin-top:35px">En tant qu'<strong>expert de l'intégration Odoo</strong>, Les Moulins d'eau douce vous aide à exploiter tout le potentiel de l'ERP pour optimiser votre activité <strong> agro-alimentaire.</strong></p>
+        <div class="enjeux" style="grid-template-columns:1fr">
+          <div class="enjeu"><span class="dot">?</span><span class="q">Vous perdez du temps en double saisie et en erreurs chronophages&nbsp;?</span></div>
+          <div class="enjeu"><span class="dot">?</span><span class="q">Vous voulez communiquer plus vite avec producteurs, fournisseurs et clients&nbsp;?</span></div>
+          <div class="enjeu"><span class="dot">?</span><span class="q">Vous cherchez une gestion fine des stocks, de la traçabilité et de la qualité&nbsp;?</span></div>
+        </div>
+        <a class="btn btn-solid" href="equipe.html#contact" style="margin-top:24px">On en parle&nbsp;?</a>
+      </div>
+    </div>
+
+    <!-- reprendre la main -->
+    <div class="feature rev" style="margin-top:80px">
+      <div class="photo tall zoom" style="max-height:480px;margin-left:160px">
+        <img class="ph-svg" src="images/blé.jpeg" alt="Blé dans les mains">
+      </div>
+      <div class="copy">
+        <h2 class="h2" style="color:var(--teal-900)">Intégrer pour reprendre la main sur votre gestion</h2>
+        <p class="lead" style="color:var(--teal-900);margin-top:35px;max-width:54ch">Arrêtez de subir un logiciel standard et un abonnement qui s'envole. Nous, on reste <strong>terre à terre</strong>&nbsp;: l'outil au service de votre métier.</p>
+        <div class="cols3" style="grid-template-columns:1fr;gap:16px;margin-top:30px">
+          <div class="card" style="display:flex;gap:18px;align-items:flex-start;padding:22px 24px">
+            <div class="ic pop" onclick="this.classList.add('pop-anim')" style="width:60px;height:60px;margin:0;flex:0 0 auto"><svg viewBox="0 0 48 48" fill="none" stroke="#178b88" stroke-width="3" stroke-linecap="round"><circle cx="24" cy="24" r="18"/><circle cx="24" cy="24" r="9"/><circle cx="24" cy="24" r="2.5" fill="#178b88"/></svg></div>
+            <div><h3 class="h3" style="font-size:1.15rem">Sur-mesure, vraiment</h3><p>Traduction fidèle et efficace de vos processus métiers dans Odoo.<br> <strong style="color: var(--teal-600)">Un ERP personnalisé pour vous.</strong></p></div>
+          </div>
+          <div class="card" style="display:flex;gap:18px;align-items:flex-start;padding:22px 24px">
+            <div class="ic pop" onclick="this.classList.add('pop-anim')" style="width:60px;height:60px;margin:0;flex:0 0 auto"><svg viewBox="0 0 48 48" fill="none" stroke="#178b88" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M8 40V20l16-12 16 12v20"/><path d="M8 40h32M19 40v-10h10v10"/></svg></div>
+            <div><h3 class="h3" style="font-size:1.15rem">Autonome &amp; transmissible</h3><p>Un code standard, jamais verrouillé, documenté et facile à reprendre.<br> <strong  style="color: var(--teal-600)">Vous restez libre, pour toujours.</strong></p></div>
+          </div>
+          <div class="card" style="display:flex;gap:18px;align-items:flex-start;padding:22px 24px">
+            <div class="ic pop" onclick="this.classList.add('pop-anim')" style="width:60px;height:60px;margin:0;flex:0 0 auto"><svg viewBox="0 0 48 48" fill="none" stroke="#178b88" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M24 4l16 6v10c0 11-7 18-16 22C15 38 8 31 8 20V10z"/><path d="M17 23l5 5 9-10"/></svg></div>
+            <div><h3 class="h3" style="font-size:1.15rem">Serein &amp; sécurisé</h3><p>Sécurisation élevée, backup quotidien, communication claire.<br> <strong  style="color: var(--teal-600)">Vous dormez tranquille.</strong></p></div>
+          </div>
+        </div>
+        <a class="btn btn-ghost" href="#methodologie" style="margin-top:26px">Notre méthodologie</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="methodologie" class="bg-cream pad">
+  <div class="container">
+    <div class="feature" style="align-items:flex-start">
+      <div class="sec-head" style="max-width:none">
+        <span class="eyebrow-lg">Notre méthodologie</span>
+        <h2 class="h2" style="margin:14px 0 0">Simple &amp; <span class="uline teal">efficace</span></h2>
+        <p class="lead" style="margin-top:35px;max-width:52ch">Comme un <b>moulin bien réglé</b>&nbsp;: on fait tourner la mécanique à la <b>bonne vitesse</b>, dans le <b>bon sens</b>, pour irriguer toute l'entreprise et <b>fluidifier la gestion</b>. <br><br>  <b style="color: #178b88; font-size: larger;">Autonome. Sans rouille. Sans dépendance.</b></p>
+      </div>
+      <div class="photo zoom" style="max-height:300px">
+        <img class="ph-svg" src="images/methodo3.jpg" alt="Équipe au travail">
+      </div>
+    </div>
+
+    <div class="method">
+      <div class="step">
+        <div class="num">01</div>
+        <div>
+          <h3 class="h3">Le cadrage</h3>
+          <span class="catch mk-mint">Vous nous partagez, on discute, nous comprenons.</span>
+          <p>Notre équipe s'applique à comprendre vos besoins, vos flux réels (stocks, ventes, production…) et vos enjeux métiers.</p>
+          <span class="mill">💧 On analyse tous les éléments.</span>
+        </div>
+        <div class="si"><svg viewBox="0 0 48 48" fill="none" stroke="#178b88" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="40" height="40" rx="3"/><path d="M24 14V34"/><path d="M14 24H34"/><circle cx="24" cy="24" r="6.2"/></svg></div>
+      </div>
+      <div class="flow-arrow right"><svg viewBox="0 0 80 40" fill="none" stroke="#0c3f43" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M14 8c34 0 46 8 50 24"/><path d="M52 26l12 6 4-13"/></svg></div>
+      <div class="step">
+        <div class="num">02</div>
+        <div>
+          <h3 class="h3">L'audit d'optimisation</h3>
+          <span class="catch mk-mint">On identifie, nous optimisons.</span>
+          <p>Ensemble, nous évaluons l'efficacité de votre instance Odoo et détectons les leviers d'amélioration pour vos équipes.</p>
+          <span class="mill">🔧 On répare le moulin.</span>
+        </div>
+        <div class="si"><svg viewBox="0 0 48 48" fill="none" stroke="#178b88" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="21" cy="21" r="12"/><path d="M30 30l10 10"/><path d="M21 15v6l4 3"/></svg></div>
+      </div>
+      <div class="flow-arrow left"><svg viewBox="0 0 80 40" fill="none" stroke="#0c3f43" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M66 8c-34 0-46 8-50 24"/><path d="M28 26l-12 6-4-13"/></svg></div>
+      <div class="step">
+        <div class="num">03</div>
+        <div>
+          <h3 class="h3">Le développement spécifique</h3>
+          <span class="catch mk-mint">Nous configurons, vous évoluez.</span>
+          <p>Nous configurons les modules adaptés à vos besoins. Vous repartez avec une solution Odoo <strong>opérationnelle</strong>, <strong>testée</strong> et <strong>personnalisée</strong>, migration de vos données assurée sans interruption.</p>
+          <span class="mill">⚙️ La machine est lancée.</span>
+        </div>
+        <div class="si"><svg viewBox="0 0 48 48" fill="none" stroke="#178b88" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M17 16l-9 8 9 8M31 16l9 8-9 8M27 12l-6 24"/></svg></div>
+      </div>
+      <div class="flow-arrow right"><svg viewBox="0 0 80 40" fill="none" stroke="#0c3f43" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M14 8c34 0 46 8 50 24"/><path d="M52 26l12 6 4-13"/></svg></div>
+      <div class="step">
+        <div class="num">04</div>
+        <div>
+          <h3 class="h3">Formation, support &amp; maintenance</h3>
+          <span class="catch mk-mint">Nous vous formons et vous accompagnons jusqu'au bout.</span>
+          <p>Une <strong>formation personnalisée</strong> de vos utilisateurs, et un support technique <strong>réactif</strong> et <strong>complet</strong>&nbsp;: assistance, maintenance, mises à jour.</p>
+          <span class="mill"> ✅️ La roue tournera pour toujours.</span>
+        </div>
+        <div class="si"><svg viewBox="0 0 48 48" fill="none" stroke="#178b88" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="17" cy="18" r="6"></circle><circle cx="33" cy="20" r="5"></circle><path d="M7 38a10 10 0 0 1 20 0M27 38a9 9 0 0 1 14-7.5"></path></svg></div>
+      </div>
+    </div>
+    <div style="margin-top:36px;text-align:center"><a class="btn btn-accent" href="equipe.html#contact">Décrire mon besoin</a></div>
+  </div>
+</section>
+
+<!-- ===== Ils nous ont fait confiance ===== -->
+<section id="references" class="bg-pale pad">
+  <div class="container">
+    <div class="sec-head center" style="max-width:60ch">
+      <span class="eyebrow-lg">Ils nous ont fait confiance</span>
+    </div>
+
+    <div class="cols3" style="grid-template-columns:1fr;max-width:520px;margin:32px auto 0;gap:28px">
+      <a href="https://revoliva.com/" target="_blank" rel="noopener noreferrer" class="card" style="display:block;text-decoration:none">
+        <img src="images/logorevoliva_mot-removebg-preview.png" alt="Revoliva" style="height:80px;object-fit:contain;margin-bottom:18px">
+        <h3 class="h3" style="font-size:1.1rem;color:var(--teal-900)">Revoliva <span style="font-weight:400;color:#5a706f">(France)</span></h3>
+        <p style="color:#384b4a;margin-top:8px">Production, dégustation et vente d'huile d'olive bio-régénérative.</p>
+
+        <p style="margin-top:16px;font-family:var(--display);font-weight:700;font-size:.72rem;text-transform:uppercase;letter-spacing:.06em;color:var(--teal-600)">Service rendu&nbsp;:</p>
+        <p style="color:#384b4a;font-size:.95rem;margin-top:4px">Intégration Odoo&nbsp;: migration, connexions Pennylane et Shopify, modules Fabrication sur-mesure.</p>
+
+        <span style="display:inline-block;margin-top:16px;border:2px solid var(--orange);color:var(--orange);font-family:var(--display);font-weight:800;font-size:.85rem;padding:8px 14px;border-radius:10px">Gestion et expérience client optimisées</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA ===== -->
+<section class="cta pad" style="overflow:hidden">
+  <div class="photo diag fade-right" style="position:absolute;left: -45px;;top:0;bottom:0;width:49%;border-radius:0;z-index:0">
+    <img class="ph-svg" src="images/farmer pointing.jpg" alt="paysans">
+  </div>
+  <div class="container" style="position:relative;z-index:1">
+    <span class="badge">Et si on faisait tourner ça ensemble&nbsp;?</span>
+    <h2 class="h2">Votre Odoo mérite mieux qu'une intégration standard</h2>
+    <p>Parlons de vos processus, de votre budget et de ce qu'on peut faire pousser. Le diagnostic est <strong>offert</strong>.</p>
+    <a class="btn btn-solid" href="equipe.html#contact">Lancer mon diagnostic</a>
+  </div>
+</section>
+
+<footer class="footer" id="footer">
+  <div class="container">
+    <div class="fgrid">
+      <div class="fcol">
+        <a class="brand" href="index.html" style="color:#fff"><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="22" fill="none" stroke="currentColor" stroke-width="2.4"/><g class="logo-wheel"><path d="M24 24 L24 6 L39 14 Z" fill="#5cb8b2"/><path d="M24 24 L42 24 L34 39 Z" fill="#a8e3d1"/><path d="M24 24 L24 42 L9 34 Z" fill="#5cb8b2"/><path d="M24 24 L6 24 L14 9 Z" fill="#a8e3d1"/></g><circle cx="24" cy="24" r="7" fill="#0c3f43"/><circle cx="24" cy="24" r="3.4" fill="#a8e3d1"/></svg>Les Moulins d'eau douce</a>
+      </div>
+      <div class="fcol"><span class="title">Le site</span><a href="index.html">Millo ERP</a><a href="integration.html">Intégration Odoo</a><a href="differences.html">Nos différences</a><a href="engagements.html">Nos engagements</a><a href="equipe.html">Qui sommes-nous</a></div>
+      <div class="fcol"><span class="title">Odoo &amp; agro</span><a href="integration.html#methodologie">Notre méthodologie</a><a href="differences.html">Spécialisation agro</a><a href="differences.html">Sécurité</a></div>
+      <div class="fcol"><span class="title">Contact</span><a href="equipe.html#contact">Diagnostic gratuit</a><a href="mailto:contact@lesmoulinsdeaudouce.fr">contact@lesmoulinsdeaudouce.fr</a><a href="tel:+33780048603">+33 7 80 04 86 03</a></div>
+      <div class="fcol"><span class="title">Nous suivre</span><div class="socials"><a href="#">in</a><a href="#">gh</a></div></div>
+    </div>
+    <div class="legal">© 2026 Les Moulins d'eau douce — Mentions légales · Confidentialité · Hébergement sécurisé</div>
+  </div>
+</footer>
+
+<script>
+document.querySelectorAll('.ic').forEach(function(el){
+  el.addEventListener('animationend',function(){el.classList.remove('pop-anim');});
+});
+</script>
+</body>
+</html>
