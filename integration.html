@@ -19,7 +19,7 @@
       Les Moulins d'eau douce
     </a>
     <nav class="nav" id="nav">
-      <a href="index.html">Millo ERP</a>
+      <a href="index.html">MILLØ - ERP</a>
       <a href="integration.html" class="active">Intégration Odoo</a>
       <a href="differences.html">Nos différences</a>
       <div class="nav-drop">
@@ -36,6 +36,45 @@
     <button class="burger" aria-label="Menu" onclick="document.getElementById('nav').classList.toggle('open')"><span></span><span></span><span></span></button>
   </div>
 </header>
+
+<!-- ===== Hero ===== -->
+<section class="hero">
+  <div class="slides">
+    <div class="slide" style="background:linear-gradient(135deg,#10595c,#0c3f43)"></div>
+    <div class="slide" style="background:linear-gradient(135deg,#178b88,#0c3f43)"></div>
+    <div class="slide" style="background:linear-gradient(135deg,#5cb8b2,#10595c)"></div>
+    <div class="slide" style="background:linear-gradient(135deg,#0c3f43,#178b88)"></div>
+  </div>
+
+  <!-- grande roue qui tourne (œil, sans goutte d'eau) -->
+  <div class="hero-logo" aria-hidden="true">
+    <svg viewBox="0 0 200 200">
+      <circle cx="100" cy="100" r="92" fill="none" stroke="rgba(255,255,255,.25)" stroke-width="2" stroke-dasharray="3 8"/>
+      <g class="spin">
+        <path d="M100 100 L100 22 a78 78 0 0 1 55 23 Z" fill="rgba(168,227,209,.85)"/>
+        <path d="M100 100 L178 100 a78 78 0 0 1 -23 55 Z" fill="rgba(92,184,178,.85)"/>
+        <path d="M100 100 L100 178 a78 78 0 0 1 -55 -23 Z" fill="rgba(168,227,209,.85)"/>
+        <path d="M100 100 L22 100 a78 78 0 0 1 23 -55 Z" fill="rgba(92,184,178,.85)"/>
+      </g>
+      <circle cx="100" cy="100" r="30" fill="#f6f3ee"/>
+      <circle cx="100" cy="100" r="13" fill="#0c3f43"/>
+    </svg>
+  </div>
+
+  <!-- emplacement photo : chaine de tri -->
+  <div class="photo diag" style="position:absolute;bottom:100px;right:36px;width:min(40vw,400px);aspect-ratio:16/10;z-index:5;border:3px solid rgba(255,255,255,.6)">
+    <img class="ph-svg" src="images/chaine_tri.jpeg" alt="Chaîne de tri agroalimentaire">
+  </div>
+
+  <div class="container">
+    <h1 class="fade d1" style="font-size:clamp(3.6rem,7vw,6rem)">Faisons tourner votre Odoo dans le <span class="accent uline white">bon&nbsp;sens</span></h1>
+    <p class="lead fade d2" style="margin-top:34px">L'intégration Odoo personnalisée, terre à terre, abordable, simple et efficace. Un ERP taillé pour vos processus métiers — pas l'inverse.</p>
+    <div class="actions fade d3">
+      <a class="btn btn-accent2" href="differences.html">Voir nos différences</a>
+      <a class="btn btn-accent4" href="equipe.html#contact">Lancer mon diagnostic</a>
+    </div>
+  </div>
+</section>
 
 <section id="integration" class="bg-beige pad">
   <div class="container">
@@ -141,7 +180,7 @@
   </div>
 </section>
 
-<section class="bg-mint pad skew-top">
+<section class="bg-mint pad skew-top" style="margin-top:-4vw">
   <div class="container">
     <div class="feature">
       <div class="photo tall zoom" style="max-height:480px ; ">
@@ -258,14 +297,15 @@
 
     <div class="cols3" style="grid-template-columns:1fr;max-width:520px;margin:32px auto 0;gap:28px">
       <a href="https://revoliva.com/" target="_blank" rel="noopener noreferrer" class="card" style="display:block;text-decoration:none">
-        <img src="images/logorevoliva_mot-removebg-preview.png" alt="Revoliva" style="height:80px;object-fit:contain;margin-bottom:18px">
+        <img src="images/logo_revoliva_lettre_r.png" alt="Revoliva" style="height:80px;object-fit:contain;margin-bottom:18px">
         <h3 class="h3" style="font-size:1.1rem;color:var(--teal-900)">Revoliva <span style="font-weight:400;color:#5a706f">(France)</span></h3>
         <p style="color:#384b4a;margin-top:8px">Production, dégustation et vente d'huile d'olive bio-régénérative.</p>
 
         <p style="margin-top:16px;font-family:var(--display);font-weight:700;font-size:.72rem;text-transform:uppercase;letter-spacing:.06em;color:var(--teal-600)">Service rendu&nbsp;:</p>
-        <p style="color:#384b4a;font-size:.95rem;margin-top:4px">Intégration Odoo&nbsp;: migration, connexions Pennylane et Shopify, modules Fabrication sur-mesure.</p>
+        <p style="color:#384b4a;font-size:.95rem;margin-top:4px">Intégration Odoo&nbsp;: migration, connexions Pennylane et Shopify, module fabrication sur-mesure.</p>
 
-        <span style="display:inline-block;margin-top:16px;border:2px solid var(--orange);color:var(--orange);font-family:var(--display);font-weight:800;font-size:.85rem;padding:8px 14px;border-radius:10px">Gestion et expérience client optimisées</span>
+        <p style="margin-top:16px;font-family:var(--display);font-weight:700;font-size:.72rem;text-transform:uppercase;letter-spacing:.06em;color:var(--orange)">Les résultats&nbsp;:</p>
+        <span style="display:inline-block;margin-top:4px;border:2px solid var(--orange);color:var(--orange);font-family:var(--display);font-weight:800;font-size:.85rem;padding:8px 14px;border-radius:10px">Gestion et expérience client optimisées</span>
       </a>
     </div>
   </div>
@@ -274,7 +314,7 @@
 <!-- ===== CTA ===== -->
 <section class="cta pad" style="overflow:hidden">
   <div class="photo diag fade-right" style="position:absolute;left: -45px;;top:0;bottom:0;width:49%;border-radius:0;z-index:0">
-    <img class="ph-svg" src="images/farmer pointing.jpg" alt="paysans">
+    <img class="ph-svg" src="images/farmer_doigt_compress.jpg" alt="paysans">
   </div>
   <div class="container" style="position:relative;z-index:1">
     <span class="badge">Et si on faisait tourner ça ensemble&nbsp;?</span>
@@ -290,7 +330,7 @@
       <div class="fcol">
         <a class="brand" href="index.html" style="color:#fff"><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="22" fill="none" stroke="currentColor" stroke-width="2.4"/><g class="logo-wheel"><path d="M24 24 L24 6 L39 14 Z" fill="#5cb8b2"/><path d="M24 24 L42 24 L34 39 Z" fill="#a8e3d1"/><path d="M24 24 L24 42 L9 34 Z" fill="#5cb8b2"/><path d="M24 24 L6 24 L14 9 Z" fill="#a8e3d1"/></g><circle cx="24" cy="24" r="7" fill="#0c3f43"/><circle cx="24" cy="24" r="3.4" fill="#a8e3d1"/></svg>Les Moulins d'eau douce</a>
       </div>
-      <div class="fcol"><span class="title">Le site</span><a href="index.html">Millo ERP</a><a href="integration.html">Intégration Odoo</a><a href="differences.html">Nos différences</a><a href="engagements.html">Nos engagements</a><a href="equipe.html">Qui sommes-nous</a></div>
+      <div class="fcol"><span class="title">Le site</span><a href="index.html">MILLØ - ERP</a><a href="integration.html">Intégration Odoo</a><a href="differences.html">Nos différences</a><a href="engagements.html">Nos engagements</a><a href="equipe.html">Qui sommes-nous</a></div>
       <div class="fcol"><span class="title">Odoo &amp; agro</span><a href="integration.html#methodologie">Notre méthodologie</a><a href="differences.html">Spécialisation agro</a><a href="differences.html">Sécurité</a></div>
       <div class="fcol"><span class="title">Contact</span><a href="equipe.html#contact">Diagnostic gratuit</a><a href="mailto:contact@lesmoulinsdeaudouce.fr">contact@lesmoulinsdeaudouce.fr</a><a href="tel:+33780048603">+33 7 80 04 86 03</a></div>
       <div class="fcol"><span class="title">Nous suivre</span><div class="socials"><a href="#">in</a><a href="#">gh</a></div></div>
