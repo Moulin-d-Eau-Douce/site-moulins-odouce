@@ -219,6 +219,19 @@ section{position:relative}
 .bg-teal .card p,.bg-teal-800 .card p{color:rgba(255,255,255,.85)}
 .bg-teal .ic,.bg-teal-800 .ic{background:rgba(255,255,255,.1)}
 
+/* ---------- Case-study cards (Ils ont choisi MILLØ / Ils nous ont fait confiance) ---------- */
+.case-box{border-radius:14px;padding:16px 20px;margin-top:16px}
+.case-box-title{font-family:var(--display);font-weight:700;font-size:.72rem;text-transform:uppercase;letter-spacing:.06em;margin-bottom:6px}
+.case-box.blue{background:rgba(167,205,238,.25);border:1px solid rgba(167,205,238,.8)}
+.case-box.blue .case-box-title{color:var(--teal-800)}
+.case-box.orange{background:rgba(240,103,31,.08);border:1px solid rgba(240,103,31,.35)}
+.case-box.orange .case-box-title{color:var(--orange-deep)}
+.case-box p{color:#384b4a;font-size:.95rem}
+.case-card-cta{margin-top:20px;padding-top:18px;border-top:1px solid rgba(12,63,67,.1);display:flex;align-items:center;justify-content:flex-end;gap:12px;flex-wrap:wrap}
+.case-card-cta span{color:var(--teal-800);font-weight:600;font-family:var(--display);font-size:.92rem;display:flex;align-items:center;gap:8px}
+.case-card-cta .arrow{color:var(--orange);font-weight:800}
+.case-card-cta .btn{flex:0 0 auto;padding:10px 20px;font-size:.88rem}
+
 /* ---------- Photo placeholders (swap with real licensed photos) ---------- */
 .photo{border-radius:var(--radius-lg);overflow:hidden;position:relative;aspect-ratio:4/3;
   background:linear-gradient(135deg,var(--teal-600),var(--teal-900));display:grid;place-items:center}
