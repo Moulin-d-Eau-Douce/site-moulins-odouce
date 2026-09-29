@@ -8,6 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Geist:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="images/favicon.svg">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -31,7 +32,7 @@
           </div>
         </div>
       </div>
-      <a class="btn btn-accent" href="equipe.html#contact" style="padding:10px 22px">Parlons-en</a>
+      <a class="btn btn-accent" href="contact.html" style="padding:10px 22px">Parlons-en</a>
     </nav>
     <button class="burger" aria-label="Menu" onclick="document.getElementById('nav').classList.toggle('open')"><span></span><span></span><span></span></button>
   </div>
@@ -68,20 +69,20 @@
 
   <div class="container">
     <h1 class="fade d1" style="font-size:clamp(3.6rem,7vw,6rem)">Faisons tourner votre Odoo dans le <span class="accent uline white">bon&nbsp;sens</span></h1>
-    <p class="lead fade d2" style="margin-top:34px">L'intégration Odoo personnalisée, terre à terre, abordable, simple et efficace. Un ERP taillé pour vos processus métiers — pas l'inverse.</p>
+    <p class="lead fade d2" style="margin-top:34px">L'intégration Odoo spécifique et agile. Pour les acteurs de l'agroalimentaire.</p>
     <div class="actions fade d3">
       <a class="btn btn-accent2" href="differences.html">Voir nos différences</a>
-      <a class="btn btn-accent4" href="equipe.html#contact">Lancer mon diagnostic</a>
+      <a class="btn btn-accent4" href="contact.html">Lancer mon diagnostic</a>
     </div>
   </div>
 </section>
 
 <section id="integration" class="bg-beige pad">
   <div class="container">
-    <div class="sec-head center" style="max-width:60ch">
+    <div class="sec-head" style="max-width:none">
       <span class="eyebrow-lg">ERP, Odoo&nbsp;: c'est quoi&nbsp;?</span>
-      <p class="lead" style="margin-top:26px">Un <strong>ERP</strong> — <em>Enterprise Resource Planning</em> — est un logiciel qui permet de centraliser l'ensemble de vos <b>données</b> et de vos <b>processus métiers</b> dans un seul outil.</p>
-      <p class="lead" style="margin-top:14px">Odoo, c'est le meilleur ERP. C'est tout votre business <span class="mk-mint" style="color:#0c3f43">agro</span> sur une seule plateforme&nbsp;: <strong>simple</strong>, <strong>efficace</strong> et <strong>abordable</strong>.</p>
+      <p class="lead" style="margin-top:26px;max-width:none">Un <strong>ERP</strong> — <em>Enterprise Resource Planning</em> — est un logiciel qui permet de centraliser l'ensemble de vos <b>données</b> et de vos <b>processus métiers</b> dans un seul outil.</p>
+      <p class="lead" style="margin-top:14px;max-width:none">Odoo, c'est le meilleur ERP. C'est tout votre business <span class="mk-mint" style="color:#0c3f43">agro</span> sur une seule plateforme&nbsp;: <strong>simple</strong> et <strong>efficace</strong>.</p>
     </div>
 
     <p style="margin:46px 0 22px;font-family:var(--display);font-weight:400;font-size:1.35rem;color:var(--teal-900)">
@@ -194,13 +195,16 @@
           <div class="enjeu"><span class="dot">?</span><span class="q">Vous voulez communiquer plus vite avec producteurs, fournisseurs et clients&nbsp;?</span></div>
           <div class="enjeu"><span class="dot">?</span><span class="q">Vous cherchez une gestion fine des stocks, de la traçabilité et de la qualité&nbsp;?</span></div>
         </div>
-        <a class="btn btn-solid" href="equipe.html#contact" style="margin-top:24px">On en parle&nbsp;?</a>
+        <div style="display:flex;gap:14px;flex-wrap:wrap;margin-top:24px">
+          <a class="btn btn-solid" href="contact.html" style="margin-top:0">On en parle&nbsp;?</a>
+          <a class="btn btn-orange" href="contact.html#faq" style="margin-top:0">Q&amp;A</a>
+        </div>
       </div>
     </div>
 
     <!-- reprendre la main -->
     <div class="feature rev" style="margin-top:80px">
-      <div class="photo tall zoom" style="max-height:480px;margin-left:160px">
+      <div class="photo tall zoom photo-ble" style="max-height:480px;margin-left:160px">
         <img class="ph-svg" src="images/blé.jpeg" alt="Blé dans les mains">
       </div>
       <div class="copy">
@@ -284,12 +288,12 @@
         <div class="si"><svg viewBox="0 0 48 48" fill="none" stroke="#178b88" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="17" cy="18" r="6"></circle><circle cx="33" cy="20" r="5"></circle><path d="M7 38a10 10 0 0 1 20 0M27 38a9 9 0 0 1 14-7.5"></path></svg></div>
       </div>
     </div>
-    <div style="margin-top:36px;text-align:center"><a class="btn btn-accent" href="equipe.html#contact">Décrire mon besoin</a></div>
+    <div style="margin-top:36px;text-align:center"><a class="btn btn-accent" href="contact.html">Décrire mon besoin</a></div>
   </div>
 </section>
 
 <!-- ===== Ils nous ont fait confiance ===== -->
-<section id="references" class="bg-sky pad">
+<section id="references" class="bg-ice pad">
   <div class="container">
     <div class="sec-head center" style="max-width:60ch">
       <span class="eyebrow-lg">Ils nous ont fait confiance</span>
@@ -329,7 +333,7 @@
     <span class="badge">Et si on faisait tourner ça ensemble&nbsp;?</span>
     <h2 class="h2">Votre Odoo mérite mieux qu'une intégration standard</h2>
     <p>Parlons de vos processus, de votre budget et de ce qu'on peut faire pousser. Le diagnostic est <strong>offert</strong>.</p>
-    <a class="btn btn-solid" href="equipe.html#contact">Lancer mon diagnostic</a>
+    <a class="btn btn-solid" href="contact.html">Lancer mon diagnostic</a>
   </div>
 </section>
 
@@ -339,9 +343,9 @@
       <div class="fcol">
         <a class="brand" href="index.html" style="color:#fff"><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="22" fill="none" stroke="currentColor" stroke-width="2.4"/><g class="logo-wheel"><path d="M24 24 L24 6 L39 14 Z" fill="#5cb8b2"/><path d="M24 24 L42 24 L34 39 Z" fill="#a8e3d1"/><path d="M24 24 L24 42 L9 34 Z" fill="#5cb8b2"/><path d="M24 24 L6 24 L14 9 Z" fill="#a8e3d1"/></g><circle cx="24" cy="24" r="7" fill="#0c3f43"/><circle cx="24" cy="24" r="3.4" fill="#a8e3d1"/></svg>Les Moulins d'eau douce</a>
       </div>
-      <div class="fcol"><span class="title">Le site</span><a href="index.html">MILLØ - ERP</a><a href="integration.html">Intégration Odoo</a><a href="differences.html">Nos différences</a><a href="engagements.html">Nos engagements</a><a href="equipe.html">Qui sommes-nous</a></div>
+      <div class="fcol"><span class="title">Le site</span><a href="index.html">MILLØ - ERP</a><a href="integration.html">Intégration Odoo</a><a href="differences.html">Nos différences</a><a href="engagements.html">Nos engagements</a><a href="equipe.html">Qui sommes-nous</a><a href="contact.html">Contact</a></div>
       <div class="fcol"><span class="title">Odoo &amp; agro</span><a href="integration.html#methodologie">Notre méthodologie</a><a href="differences.html">Spécialisation agro</a><a href="differences.html">Sécurité</a></div>
-      <div class="fcol"><span class="title">Contact</span><a href="equipe.html#contact">Diagnostic gratuit</a><a href="mailto:contact@lesmoulinsdeaudouce.fr">contact@lesmoulinsdeaudouce.fr</a><a href="tel:+33780048603">+33 7 80 04 86 03</a></div>
+      <div class="fcol"><span class="title">Contact</span><a href="contact.html">Diagnostic gratuit</a><a href="contact.html#faq">Questions fréquentes</a><a href="mailto:mathisgaspar@lesmoulinsdeaudouce.fr">mathisgaspar@lesmoulinsdeaudouce.fr</a><a href="tel:+33780048603">Mathis&nbsp;: 07 80 04 86 03</a><a href="tel:+33758603048">Andres&nbsp;: 07 58 60 30 48</a></div>
       <div class="fcol"><span class="title">Nous suivre</span><div class="socials"><a href="#">in</a><a href="#">gh</a></div></div>
     </div>
     <div class="legal">© 2026 Les Moulins d'eau douce — Mentions légales · Confidentialité · Hébergement sécurisé</div>
