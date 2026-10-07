@@ -1,0 +1,128 @@
+/* =====================================================================
+   Export PDF des tutoriels MILLØ (chargé par zensical.toml : extra_css)
+
+   - Écran : style du bouton « Exporter en PDF » (ajouté par export-pdf.js).
+   - Impression / PDF : mise en page A4, découpage intelligent :
+       * page 1 = titre + objectif + étape 1 ;
+       * chaque étape suivante (h2) commence sur une nouvelle page ;
+       * une capture n'est jamais coupée, et reste sur la même page
+         que la phrase qui la précède ;
+       * captures limitées en hauteur pour qu'une étape tienne
+         en général sur une page (texte + 2 captures) ;
+       * l'encadré « À noter » n'est pas coupé.
+   ===================================================================== */
+
+/* ---------- Écran : le bouton ---------- */
+
+.md-typeset .millo-export-pdf {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  width: auto;
+  padding: 0.25rem 0.6rem;
+  border: 1px solid currentColor;
+  border-radius: 0.3rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--md-primary-fg-color);   /* orange franc : voir docs/stylesheets/millo.css */
+  cursor: pointer;
+  transition: color 0.15s, background-color 0.15s;
+}
+
+/* Survol : autre couleur ; clic : bouton plein */
+.md-typeset .millo-export-pdf:hover,
+.md-typeset .millo-export-pdf:focus-visible {
+  color: var(--millo-clic, #bf360c);
+}
+
+.md-typeset .millo-export-pdf:active {
+  color: #ffffff;
+  background-color: var(--millo-clic, #bf360c);
+  border-color: var(--millo-clic, #bf360c);
+}
+
+.md-typeset .millo-export-pdf svg {
+  width: 1.1rem;
+  height: 1.1rem;
+}
+
+/* ---------- Impression / PDF ---------- */
+
+@page {
+  size: A4;
+  margin: 1.5cm 1.5cm 1.8cm;
+
+  @bottom-center {
+    content: counter(page) " / " counter(pages);
+    font-size: 9pt;
+    color: #757575;
+  }
+}
+
+@media print {
+  /* Rien d'autre que le tutoriel */
+  .md-header,
+  .md-tabs,
+  .md-sidebar,
+  .md-footer,
+  .md-top,
+  .md-content__button,
+  .headerlink {
+    display: none !important;
+  }
+
+  .md-main__inner,
+  .md-content,
+  .md-content__inner {
+    margin: 0 !important;
+    padding: 0 !important;
+    max-width: none !important;
+  }
+
+  /* Une étape par page (sauf la 1re, qui suit le titre) */
+  .md-typeset h2 {
+    break-before: page;
+    margin-top: 0;
+  }
+
+  .md-typeset h2:first-of-type {
+    break-before: auto;
+  }
+
+  /* Un titre ne reste jamais seul en bas de page */
+  .md-typeset h1,
+  .md-typeset h2 {
+    break-after: avoid;
+  }
+
+  /* Captures : jamais coupées, collées à la phrase qui les précède */
+  .md-typeset p:has(img) {
+    break-inside: avoid;
+    margin: 0.4em 0 0.9em;
+    text-align: center;
+  }
+
+  .md-typeset p:has(+ p img) {
+    break-after: avoid;
+  }
+
+  .md-typeset img {
+    max-height: 7.5cm;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+    border: 1px solid #ddd;
+  }
+
+  /* Encadrés (« À noter »…) : jamais coupés */
+  .md-typeset .admonition,
+  .md-typeset details {
+    break-inside: avoid;
+  }
+
+  .md-typeset p,
+  .md-typeset li {
+    orphans: 3;
+    widows: 3;
+  }
+}

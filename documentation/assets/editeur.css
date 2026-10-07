@@ -1,0 +1,127 @@
+/* =====================================================================
+   Éditeur des tutoriels MILLØ (chargé par zensical.toml : extra_css)
+   Bouton « Modifier », textes modifiables et barre « Enregistrer ».
+   Rien ne s'affiche sur le site en ligne (voir editeur.js).
+   ===================================================================== */
+
+/* ---------- Bouton « Modifier » (même style que « Exporter en PDF ») ---------- */
+
+.md-typeset .millo-modifier {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  width: auto;
+  margin-left: 0.4rem;
+  padding: 0.25rem 0.6rem;
+  border: 1px solid currentColor;
+  border-radius: 0.3rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--md-primary-fg-color);
+  cursor: pointer;
+}
+
+.md-typeset .millo-modifier:hover,
+.md-typeset .millo-modifier:focus-visible {
+  color: var(--millo-clic, #bf360c);
+}
+
+.md-typeset .millo-modifier svg {
+  width: 1.1rem;
+  height: 1.1rem;
+}
+
+.millo-mode-edition .millo-modifier {
+  display: none;
+}
+
+/* ---------- Textes modifiables ---------- */
+
+.md-typeset .millo-edition {
+  outline: 1px dashed var(--md-primary-fg-color);
+  outline-offset: 2px;
+  border-radius: 2px;
+  cursor: text;
+  white-space: pre-wrap;
+}
+
+.md-typeset .millo-edition:focus {
+  outline: 2px solid var(--md-primary-fg-color);
+  background-color: var(--md-default-bg-color);
+}
+
+.md-typeset .millo-modifie {
+  background-color: rgba(239, 108, 0, 0.12);
+}
+
+/* Place pour la barre en bas de l'écran */
+.millo-mode-edition .md-content {
+  padding-bottom: 4rem;
+}
+
+/* ---------- Barre « Enregistrer / Annuler » ---------- */
+
+.millo-editeur-barre {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.6rem 1rem;
+  background-color: var(--md-default-bg-color);
+  border-top: 3px solid var(--md-primary-fg-color);
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.15);
+  font-size: 0.75rem;
+}
+
+.millo-editeur-fichier {
+  font-family: var(--md-code-font-family, monospace);
+  color: var(--md-default-fg-color--light);
+}
+
+.millo-editeur-message {
+  flex: 1;
+  min-width: 12rem;
+  white-space: pre-wrap;
+}
+
+.millo-editeur-succes {
+  color: #2e7d32;
+  font-weight: 700;
+}
+
+.millo-editeur-erreur {
+  color: #c62828;
+  font-weight: 700;
+}
+
+.millo-editeur-barre button {
+  padding: 0.35rem 0.9rem;
+  border: 1px solid var(--md-primary-fg-color);
+  border-radius: 0.3rem;
+  font-weight: 700;
+  cursor: pointer;
+  color: var(--md-primary-fg-color);
+  background: none;
+}
+
+.millo-editeur-barre .millo-enregistrer {
+  color: #ffffff;
+  background-color: var(--md-primary-fg-color);
+}
+
+.millo-editeur-barre button:disabled {
+  opacity: 0.45;
+  cursor: default;
+}
+
+@media print {
+  .millo-modifier,
+  .millo-editeur-barre {
+    display: none !important;
+  }
+}

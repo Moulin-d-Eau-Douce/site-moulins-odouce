@@ -1,0 +1,105 @@
+/* =====================================================================
+   Style des tutoriels MILLØ (chargé par zensical.toml : extra_css)
+   Classes produites par scripts/generer_tuto.py (ecrire_markdown) :
+     .objectif, .num-etape, .capture, encadré "verifier",
+     .cadre-rouge / .cadre-orange (légende des captures)
+   ===================================================================== */
+
+/* Couleur principale du site (zensical.toml : primary = "custom").
+   Orange franc : l'orange du thème (#ffa724) paraissait jaune, surtout à l'export PDF. */
+:root,
+[data-md-color-primary=custom] {
+  --md-primary-fg-color: #ef6c00;
+  --md-primary-fg-color--light: #f57c00;
+  --md-primary-fg-color--dark: #e65100;
+  --md-primary-bg-color: #ffffff;
+  --md-primary-bg-color--light: #ffffffb3;
+  --md-typeset-a-color: #e65100;
+}
+
+:root {
+  --millo-rouge: #e53935;    /* même rouge que les cadres des captures  */
+  --millo-orange: #fb8c00;   /* même orange que les cadres des captures */
+  --millo-clic: #bf360c;     /* bouton survolé / cliqué (brun-rouge)    */
+  --md-admonition-icon--verifier: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20m-2 15-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8z"/></svg>');
+}
+
+/* Phrase d'introduction */
+.md-typeset .objectif {
+  font-size: 1.1em;
+  color: var(--md-default-fg-color--light);
+  border-left: 4px solid var(--md-primary-fg-color);
+  padding-left: 0.8em;
+  margin: 0 0 1.5em;
+}
+
+/* Titres d'étape : un trait au-dessus pour bien séparer les étapes */
+.md-typeset h2 {
+  margin-top: 2.6em;
+  padding-top: 1em;
+  border-top: 1px solid var(--md-default-fg-color--lightest);
+  display: flex;
+  align-items: center;
+  gap: 0.6em;
+}
+
+/* Numéro d'étape en pastille */
+.md-typeset .num-etape {
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.8em;
+  height: 1.8em;
+  border-radius: 50%;
+  background: var(--md-primary-fg-color);
+  color: var(--md-primary-bg-color);
+  font-size: 0.85em;
+  font-weight: 700;
+}
+
+/* Consignes en liste : un peu d'air entre les lignes */
+.md-typeset ul li {
+  margin-bottom: 0.4em;
+}
+
+/* Captures : espacées, bordure légère, curseur "loupe" (agrandissement au clic) */
+.md-typeset img.capture {
+  display: block;
+  margin: 1.8em auto 2.4em;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 6px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.12);
+  cursor: zoom-in;
+}
+
+/* Encadré orange "À vérifier" (même couleur que le cadre orange des captures) */
+.md-typeset .admonition.verifier,
+.md-typeset details.verifier {
+  border-color: var(--millo-orange);          /* thème "classic" : bordure colorée */
+  background-color: rgba(251, 140, 0, 0.1);   /* thème "modern" : fond coloré */
+}
+.md-typeset .verifier > .admonition-title,
+.md-typeset .verifier > summary {
+  background-color: transparent;
+}
+.md-typeset .verifier > .admonition-title::before,
+.md-typeset .verifier > summary::before {
+  background-color: var(--millo-orange);
+  -webkit-mask-image: var(--md-admonition-icon--verifier);
+  mask-image: var(--md-admonition-icon--verifier);
+}
+.md-typeset .verifier > summary::after {
+  color: var(--millo-orange);
+}
+
+/* Légende des captures */
+.md-typeset .cadre-rouge,
+.md-typeset .cadre-orange {
+  font-weight: 700;
+  padding: 0 0.3em;
+  border: 2px solid;
+  border-radius: 3px;
+}
+.md-typeset .cadre-rouge { border-color: var(--millo-rouge); }
+.md-typeset .cadre-orange { border-color: var(--millo-orange); }
